@@ -1,0 +1,146 @@
+# If you have a `resume.json` file, copy it into `_data` and delete this file.
+# If you don't have a JSON Resume you can just edit this YAML file instead.
+# See also: <https://jsonresume.org/>.
+basics:
+  name: "Suphicha Anusirikul"
+  label: "Frontend Developer"
+  picture: "/assets/icons/icon.png"
+  email: "suphicha.anu@gmail.com"
+  phone: ""
+  website: "https://bearrior.com"
+  summary: >
+    I am a young professional in online creative industry with a degree in Bachelor 
+    of Multimedia Design from the University of Queensland (Brisbane, Australia). 
+    I am a Web Designer and Front-End Developer with 4 professional years on this 
+    field. My profession are HTML, CSS, jQuery, Web Responsive design. I am always 
+    active to learn new things, and also a quick learner! I am truly interested 
+    about User Experience Design and lots more coding languages.
+  location:
+    address: "9/9 Bangbon 3"
+    postalCode: "10160"
+    city: "Bangkae"
+    countryCode: "Thailand"
+    region: "Bangkok"
+  profiles:
+    - network: "LinkedIn"
+      username: "Suphicha Anusirikul"
+      url: "https://www.linkedin.com/in/suphicha/"
+works:
+  - company: "Agoda"
+    position: "Frontend/UI Developer"
+    website: "https://agoda.com"
+    startDate: "2016-12-05"
+    endDate: ""
+    summary: >
+      Agoda is one of the world’s largest online hotel and accommodation booking platforms. 
+      Founded in 2005 and now part of Booking Holdings, Agoda offers travelers a fast, 
+      easy way to book hundreds of thousands of properties in almost every country on earth.
+    highlights:
+      - Build SCSS/CSS Framework for Agoda use.
+      - Re-standardize the website with Accessibility-minded.
+      - Build Documentation using Jekyll.
+      - Recreating UI Framework for Agoda's React usage.
+      - Research and developer SCSS framework around the atomic approach.
+      - Working in format MVC patterns.
+      - Work using node module, yarn and Webpack.
+      - Maintenance bundling process for a better web performance.
+      - Coding custom HTML/HTML5, LESS/CSS/CSS3, Bootstrap and JavaScript/Jquery.
+      - Develop multi-platform websites such as desktop platforms and mobile platforms.
+      - Create Development Guideline for Frontend Developers responds to W3C standards,accessibility and advocated a web-standards approach to increase search engine optimization (SEO-friendly) and cross-browser friendly.
+      - Creating Automation (Gulp/Grunt).
+      - Experience with UX principles, prototyping, requirements gathering and usability testing.
+      - Work dynamically in an agile development team (Scrum and Kanban).
+      - Working cross-team and manage projects with successful outcomes.
+      - Working with data and A/B testing to improve designs and products.
+      - Coordinate UI Designers on the project life cycle, including design and development. Testing and coordinate Quality Assurance Officer.
+  - company: "Dek-D"
+    position: "CSS Designer"
+    website: "https://dek-d.com"
+    startDate: "2014-03-01"
+    endDate: "2016-03-31"
+    summary: >
+      Teenage Driven community website.
+    highlights:
+      - Bring a new face of the site into more user friendly and easy navigated site. 
+      - Develop and design responsive website into a modern design with a better user and device friendly site. 
+      - A part of Graphic Designer for banners, standee and print media. 
+      - Main focus is using Front-end programming (including jQuery, PHP, HTML, and CSS).
+volunteer:
+  - organization: "Care For Dogs"
+    position: "Caretaker"
+    website: "http://www.carefordogs.org/"
+    startDate: "2012-05-25"
+    endDate: "2010-07-01"
+    summary: "Care for Dogs Foundation is based in Chiang Mai Thailand. 
+    We organize sterilisation spaying sterilizations, medical care, vaccination and feed 
+    homeless and sickly dogs"
+    highlights:
+      - "Take care of the vaccination process"
+education:
+  - institution: "University of Queensland"
+    area: "Multimedia Design"
+    studyType: "Bachelor"
+    startDate: "2011-03-01"
+    endDate: "2013-12-25"
+    gpa: "6.05"
+#    courses:
+#      - "DB1101 - Basic SQL"
+#      - "CS2011 - Java Introduction"
+# awards:
+#  - title: "Digital Compression Pioneer Award"
+#    date: "2014-11-01"
+#    awarder: "Techcrunch"
+#    summary: "There is no spoon."
+#publications:
+#  - name: "Video compression for 3d media"
+#    publisher: "Hooli"
+#    releaseDate: "2014-10-01"
+#    website: "https://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)"
+#    summary: "Innovative middle-out compression algorithm that changes the way we store data."
+skills:
+  - name: "Web Development"
+    level: "Master"
+    star: 5
+    keywords:
+      - "HTML"
+      - "CSS"
+      - "Javascript"
+      - "React"
+      - "Galen"
+  - name: "Web Design"
+    level: "Master"
+    star: 5
+    keywords:
+      - "Photoshop"
+      - "Illustrator"
+      - "UX Design"
+      - "UI Design"
+languages:
+  - language: "Thai"
+    fluency: "Native speaker"
+    star: 5
+  - language: "English"
+    fluency: "Advance speaker"
+    star: 4
+interests:
+  - name: "Photography"
+    keywords:
+      - "Portait"
+      - "Landscape"
+  - name: "Travel"
+    keywords:
+      - "Bagpacking"
+references:
+  - name: "Philipp Kristian Diekhöner"
+    reference: >
+      MJ brings a good mix of front-end dev and design awareness – 
+      she is very easy to get along with, speaks great english and 
+      knows her stuff. Her work supporting our lead engineer and overall 
+      value-add were well appreciated. I would work with her again if I am 
+      given the chance!
+  - name: "Anthony Barry"
+    reference: >
+      I had the pleasure of working with Suphicha at The Big Dot. 
+      She was an extremely talented all rounder who would take on any challenge with 
+      enthusiasm. She was hardworking, speedy and her dedication to the role was a 
+      great asset to the company.

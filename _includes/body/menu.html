@@ -1,0 +1,22 @@
+<div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <div class="nav-btn-bar">
+      <span class="sr-only">{{ site.data.strings.jump_to | default:"Jump to" }}{{ site.data.strings.colon | default:":" }}</span>
+      <a id="_menu" class="nav-btn no-hover fl" href="#_navigation">
+      <!-- <a id="_menu" class="nav-btn no-hover fl" href="#" onClick="javascript :history.go(-1);"> -->
+        <span class="sr-only">{{ site.data.strings.navigation | default:"Navigation" }}</span>
+        <span class="icon-menu"></span>
+      </a>
+      <button id="dark-mode" class="nav-btn no-hover fl" onclick="darkMode()">
+        <span class="sr-only">Dark Mode</span>
+        <span class="icon-contrast"></span> 
+      </button>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+<script>
+function darkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
