@@ -1,0 +1,38 @@
+---
+layout: base
+---
+<article id="project" class="page" role="article" vocab="http://schema.org/" typeof="CreativeWork" resource="#project">
+    <header>
+        <h1 class="page-title" property="name">{{ page.title }}</h1>
+        <p class="post-date heading"> 
+            <a href="/projects/" class="flip-title" property="genre">Projects*</a> | 
+            <time  datetime="{{ page.date | date: '%Y-%m-%d %H:%M' }}">{{ page.date | date: "%Y" }}</time>
+            {% if page.links %}
+                <span class="fr"> 
+                    <span class="sr-only">| Links:</span>
+                    {% for link in page.links %}
+                        {% if link.title == "Website" %}
+                            <a class="external" href="{{ link.url }}" property="sameAs">Website</a>
+                        {% endif %} 
+                        {% if forloop.first %} | {% endif %} 
+                        {% if link.title == "Source" %}
+                            <a class="external" href="{{ link.url }}" property="sameAs">Source</a>
+                        {% endif %}
+                    {% endfor %}
+                </span>
+            {% endif %}
+        </p>
+        <div class="img lead sixteen-nine" style="opacity: 1;">
+            <hy-img src="{{ page.image }}" alt="hy-push-state" property="image"
+                root-margin="512px"> 
+                <noscript>
+                    <img data-ignore src="{{ page.image }}"  alt="hy-push-state" />
+                </noscript>
+            </hy-img>
+        </div>
+        <p class="message" property="description"> {{ page.description }}
+            <meta property="disambiguatingDescription" content="{{ page.caption }}">
+        </p>
+    </header>
+    {{ content }}
+</article>

@@ -1,0 +1,402 @@
+---
+layout: base
+---
+<article id="resume" class="page vcard h-card" role="article" vocab="http://schema.org/" typeof="Person" resource="#resume">
+    <header class="hr">
+        <h1 class="page-title fn p-name" property="name">{{ site.data.resume.basics.name | default:"Suphicha Anusirikul" }}</h1>
+        <p class="h3 faded subline title p-job-title" property="jobTitle">{{ site.data.resume.basics.label }}</p>
+        <hy-img src="{{ site.data.resume.basics.picture }}" class="avatar photo u-photo" alt="{{ site.data.resume.name }}" property="image"
+            root-margin="512px"> 
+            <noscript>
+                <img data-ignore src="{{ site.data.resume.basics.picture }}" class="avatar photo u-photo" alt="{{ site.data.resume.basics.name }}" />
+            </noscript> 
+        </hy-img>
+    </header>
+
+    <p class="note p-note" property="description"> 
+        {{ site.data.resume.basics.summary }}
+    </p>
+    <div class="columns contact">
+        <dl class="column column-3-5">
+            {% if site.data.resume.basics.location != "" %}
+                <!-- Address -->
+                <dt class="faded"> 
+                    <span class="icon-location" title="Location"></span> 
+                    <span class="sr-only">Location</span>
+                    </dt>
+                <dd class="bold adr p-adr h-adr" property="address" typeof="PostalAddress">
+                    <!-- <span class="street-address p-street-address" property="streetAddress">{{ site.data.resume.basics.location.address }}</span>,  -->
+                    <span class="locality p-locality" property="addressLocality">{{ site.data.resume.basics.location.city }}</span>, 
+                    <span class="region p-region" property="addressRegion">{{ site.data.resume.basics.location.region }}</span>,
+                    <span class="postal-code p-postal-code" property="postalCode">{{ site.data.resume.basics.location.postalCode }}</span>,
+                    <meta property="addressCountry" content="US"> 
+                    <span class="country-name p-country-name">{{ site.data.resume.basics.location.countryCode }}</span>
+                </dd>
+            {% endif %}
+            {% if site.data.resume.basics.email != "" %}
+                <!-- Email -->
+                <dt class="faded">
+                    <span class="icon-mail" title="email"></span>
+                    <span class="sr-only">E-mail</span>
+                </dt>
+                <dd class="bold"> 
+                    <a href="mailto:{{ site.data.resume.basics.email }}" class="external no-print-link url u-url" property="sameAs">
+                        {{ site.data.resume.basics.email }}
+                    </a>
+                </dd>
+            {% endif %}
+            {% if site.data.resume.basics.phone != "" %}
+                <!-- Phone -->
+                <dt class="faded"> 
+                    <span class="icon-phone" title="Phone"></span> 
+                    <span class="sr-only">Phone</span>
+                </dt>
+                <dd class="bold">
+                    <meta property="telephone" content="{{ site.data.resume.basics.phone }}">
+                    <a href="tel:{{ site.data.resume.basics.phone }}" class="external no-print-link tel p-tel">{{ site.data.resume.basics.phone }}</a>
+                </dd>
+            {% endif %}
+            {% if site.data.resume.basics.website != "" %}
+                <!-- Website -->
+                <dt class="faded">
+                    <span class="icon-home3" title="Website"></span>
+                    <span class="sr-only">Website</span>
+                </dt>
+                <dd class="bold"> 
+                    <a href="{{ site.data.resume.basics.website }}" class="external no-print-link url u-url" property="sameAs">
+                        {{ site.data.resume.basics.website }}
+                    </a>
+                </dd>
+            {% endif %}
+        </dl>
+        <dl class="column column-2-5">
+            {% for profile in site.data.resume.basics.profiles %}
+                <dt class="faded"> 
+                    <span class="icon-{{ profile.network | downcase }}" title="{{ profile.network }}"></span> 
+                    <span class="sr-only">{{ profile.network }}</span>
+                </dt>
+                <dd class="bold">
+                    {% if profile.url == "" %}
+                        <span class="nickname p-nickname ">{{ profile.username }}</span>
+                    {% else %}
+                        <a href="{{ profile.url }}" class="external no-print-link url u-url" property="sameAs">
+                            <span class="nickname p-nickname ">{{ profile.username }}</span>
+                        </a>
+                    {% endif %}
+                </dd>
+            {% endfor %}
+        </dl>
+    </div>
+    <div class="columns">
+        <div class="column column-3-5">
+            <!-- Work -->
+            <section>
+                <div class="npb">
+                    <h2 id="work" class="h3 faded hr"> Experience 
+                        <span class="symbol icon-briefcase"></span> 
+                        <a href="#work" class="permalink"> 
+                            <span class="sr-only">Permalink</span> 
+                            <span class="icon-link"></span> 
+                        </a> 
+                    </h2>
+                    {% for work in site.data.resume.works %}
+                        <section>
+                                <header class="" property="worksFor" typeof="Organization">
+                                    <p class="faded"> 
+                                        <time datetime="{{ work.startDate | date: '%Y-%m-%d %H:%M' }}">{{ work.startDate }}</time> –
+                                        {% if work.endDate == "" %}
+                                            <em>present</em>
+                                        {% else %}
+                                        <time datetime="{{ work.endDate | date: '%Y-%m-%d %H:%M' }}">{{ work.endDate }}</time>
+                                        {% endif %}
+                                    </p>
+                                    <h3 class="h4 faded">
+                                        <meta property="name" content="{{ work.company }}"> 
+                                        <span class="bc">{{ work.position }}</span> at 
+                                        <a class="org p-org h-card " href="{{ work.website }}" property="sameAs"> 
+                                            {{ work.company }}
+                                        </a>
+                                    </h3>
+                                </header>
+                                <p class="message"> {{ work.summary }}</p>
+                                {% if work.highlights %}
+                                <h4 class="sr-only">Highlights</h4>
+                                    <ul>
+                                        {% assign i = 0 %}
+                                        {% for highlight in work.highlights %}
+                                            <li>{{ work.highlights[i] }}</li>
+                                            {% assign i = i | plus: 1 %}
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                        </section>
+                    {% endfor %}
+                </div>
+            </section>
+            <!-- Volunteer -->
+            {% if site.data.resume.volunteer%}
+                <section>
+                    <div class="npb">
+                        <h2 id="volunteer" class="h3 faded hr"> Volunteer 
+                            <span class="symbol icon-earth"></span> 
+                            <a href="#volunteer" class="permalink"> 
+                                <span class="sr-only">Permalink</span> 
+                            <span class="icon-link"></span> 
+                            </a>
+                        </h2>
+                        {% for volunteerWork in site.data.resume.volunteer %}
+                            <section class="no-page-break">
+                                <header class="">
+                                    <p class="faded"> 
+                                        <time datetime="{{ volunteerWork.startDate | date: '%Y-%m-%d %H:%M' }}">{{ volunteerWork.startDate }}</time> –
+                                        {% if volunteerWork.endDate == "" %}
+                                            <em>present</em>
+                                        {% else %}
+                                        <time datetime="{{ volunteerWork.endDate | date: '%Y-%m-%d %H:%M' }}">{{ volunteerWork.endDate }}</time>
+                                        {% endif %}
+                                    </p>
+                                    <h3 class="h4 faded">
+                                        <span class="bc">{{ volunteerWork.position }}</span> at 
+                                        <a class=" " href="{{ volunteerWork.website }}"> {{ volunteerWork.organization }} </a>
+                                    </h3>
+                                </header>
+                                <p class="message">{{ volunteerWork.summary }}</p>
+                                {% if volunteerWork.highlights %}
+                                    <h4 class="sr-only">Highlights</h4>
+                                    <ul>
+                                        {% assign i = 0 %}
+                                        {% for highlight in volunteerWork.highlights %}
+                                            <li>{{ volunteerWork.highlights[i] }}</li>
+                                            {% assign i = i | plus: 1 %}
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </section>
+                        {% endfor %}
+                    </div>
+                </section>
+            {% endif %}
+            <!-- Education -->
+            {% if site.data.resume.education %}
+            <section>
+                <div class="npb">
+                    <h2 id="education" class="h3 faded hr"> Education 
+                        <span class="symbol icon-library"></span> 
+                        <a href="#education" class="permalink"> 
+                            <span class="sr-only">Permalink</span> 
+                            <span class="icon-link"></span> 
+                        </a> 
+                    </h2>
+                    {% for school in site.data.resume.education %}
+                    <section>
+                        <header class="">
+                            <p class="faded"> 
+                                    <time datetime="{{ school.startDate | date: '%Y-%m-%d %H:%M' }}">{{ school.startDate }}</time> –
+                                    {% if school.endDate == "" %}
+                                        <em>present</em>
+                                    {% else %}
+                                    <time datetime="{{ school.endDate | date: '%Y-%m-%d %H:%M' }}">{{ school.endDate }}</time>
+                                    {% endif %}
+                            </p>
+                            <h3 class="h4 faded" property="alumniOf" typeof="EducationalOrganization"> 
+                                <span class="bc">{{ school.studyType }}</span> in 
+                                <span class="bc">{{ school.area }}</span> from
+                                <span class="bc" property="name">{{ school.institution }}</span> with GPA of 
+                                <span class="bc">{{ school.gpa }}</span></h3>
+                        </header>
+                        {% if school.courses %}
+                            <h4 class="sr-only">Courses</h4>
+                            <ul>
+                                {% assign i = 0 %}
+                                {% for course in school.courses %}
+                                    <li>{{ school.course[i] }}</li>
+                                    {% assign i = i | plus: 1 %}
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </section>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+            <!-- Awards -->
+            {% if site.data.resume.awards %}
+            <section>
+                <div class="npb">
+                    <h2 id="awards" class="h3 faded hr"> Awards 
+                        <span class="symbol icon-trophy"></span> 
+                        <a href="#awards" class="permalink"> 
+                            <span class="sr-only">Permalink</span> 
+                            <span class="icon-link"></span> 
+                        </a> 
+                    </h2>
+                    {% for award in site.data.resume.awards %}
+                        <section>
+                            <header class="">
+                                {% if site.data.resume.awards %}
+                                    <p class="faded"> 
+                                        <time datetime="{{ award.date | date: '%Y-%m-%d %H:%M' }}">{{ award.date }}</time>
+                                    </p>
+                                {% endif %}
+                                <h3 class="h4 faded" property="award"> 
+                                    <span class="bc">{{ award.title }}</span> from 
+                                    <span class="bc">{{ award.awarder }}</span>
+                                </h3>
+                            </header>
+                            <p class="message">{{ award.summary }}</p>
+                        </section>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+            <!-- Publication -->
+            {% if site.data.resume.publications %}
+            <section>
+                <div class="npb">
+                    <h2 id="publications" class="h3 faded hr"> Publications 
+                        <span class="symbol icon-book"></span> 
+                        <a href="#publications" class="permalink"> 
+                            <span class="sr-only">Permalink</span> 
+                            <span class="icon-link"></span> 
+                        </a> 
+                    </h2>
+                    {% for publication in site.data.resume.publications %}
+                        <section>
+                            <header class="">
+                                <p class="faded"> 
+                                    <time datetime="{{ publication.date | date: '%Y-%m-%d %H:%M' }}">{{ publication.date }}</time>
+                                </p>
+                                <h3 class="h4 faded"> 
+                                    <a class=" " href="{{ publication.website }}"> 
+                                        {{ publication.title }}
+                                    </a> 
+                                    by <span class="bc">{{ publication.publisher }}</span>
+                                </h3>
+                            </header>
+                            <p class="message"> 
+                                {{ publication.summary }}
+                            </p>
+                        </section>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+            <!-- Referene -->
+            {% if site.data.resume.publications %}
+            <section>
+                <div class="npb">
+                    <h2 id="references" class="h3 faded hr"> References 
+                        <span class="symbol icon-quotes-right"></span>
+                        <a href="#references" class="permalink"> 
+                            <span class="sr-only">Permalink</span> 
+                            <span class="icon-link"></span> 
+                        </a> 
+                    </h2>
+                    {% for reference in site.data.resume.references %}
+                        <blockquote class="reference">
+                            <p>{{ reference.reference }}</p>
+                            <footer>— <cite>{{ reference.name }}</cite></footer>
+                        </blockquote>
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+        </div>
+        <!--second column -->
+        <div class="column column-2-5">
+            {% if site.data.resume.languages %}
+            <section class="npb">
+            <!-- Language -->
+                <h2 id="languages" class="h3 faded hr"> Languages 
+                    <span class="symbol icon-bubbles"></span> 
+                    <a href="#languages" class="permalink"> 
+                        <span class="sr-only">Permalink</span> 
+                        <span class="icon-link"></span> 
+                    </a> 
+                </h2>
+                <dl class="skills">
+                    {% for language in site.data.resume.languages %}
+                    <dt class="h4 fl">{{ language.language }}</dt>
+                    <dd class="faded clearafter">
+                        <div class="fr"> 
+                            <span class="sr-only">Fluency:</span> 
+                            <span class="help" title="{{ language.fluency }}"> 
+                                <span class="sr-only">{{ language.fluency }}</span>
+                                {% for i in (1..language.star) %}
+                                    <span class="icon-star-full"></span>
+                                {% endfor %}
+                            </span>
+                        </div>
+                    </dd>
+                    {% endfor %}
+                </dl>
+            </section>
+            {% endif %}
+            <!-- Skills-->
+            {% if site.data.resume.skills %}
+            <section class="npb">
+                <h2 id="skills" class="h3 faded hr"> Skills 
+                    <span class="symbol icon-wrench"></span> 
+                    <a href="#skills" class="permalink"> 
+                        <span class="sr-only">Permalink</span> 
+                        <span class="icon-link"></span> 
+                    </a>
+                </h2>
+                <dl class="skills">
+                    {% for skill in site.data.resume.skills %}
+                        <dt class="h4 fl">{{ skill.name }}</dt>
+                        <dd class="faded clearafter">
+                            <div class="fr"> <span class="sr-only">Level:</span> 
+                                <span class="help" title="{{ skill.level }}"> 
+                                    <span class="sr-only">{{ skill.level }}</span> 
+                                    {% for i in (1..skill.star) %}
+                                        <span class="icon-star-full"></span>
+                                    {% endfor %}
+                                </span>
+                            </div>
+                            {% if skill.keywords %}
+                                <div> 
+                                    <span class="sr-only">Keywords:</span>
+                                    <ul class="tags">
+                                        {% assign i = 0 %}
+                                        {% for keyword in skill.keywords %}
+                                        <li class="tag">{{ skill.keywords[i] }}</li>
+                                            {% assign i = i | plus: 1 %}
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            {% endif %}
+                        </dd>
+                    {% endfor %}
+                </dl>
+            </section>
+            {% endif %}
+            {% if site.data.resume.interests %}
+            <section class="npb">
+                <!-- Interest -->
+                <h2 id="interests" class="h3 faded hr"> Interests 
+                    <span class="symbol icon-heart"></span> 
+                    <a href="#interests" class="permalink"> 
+                        <span class="sr-only">Permalink</span> 
+                        <span class="icon-link"></span> 
+                    </a> 
+                </h2>
+                <dl class="skills">
+                    {% for interest in site.data.resume.interests %}
+                        <dt class="h4">{{ interest.name }}</dt>
+                        <dd> <span class="sr-only">Keywords:</span>
+                            <ul class="tags">
+                                {% assign i = 0 %}
+                                {% for keyword in interest.keywords %}
+                                <li class="tag">{{ interest.keywords[i] }}</li>
+                                    {% assign i = i | plus: 1 %}
+                                {% endfor %}
+                            </ul>
+                        </dd>
+                    {% endfor %}
+                </dl>
+            </section>
+            {% endif %}
+        </div>
+    </div>
+</article>

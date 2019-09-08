@@ -1,0 +1,46 @@
+---
+layout: base
+---
+<article class="page" role="article">
+    <header>
+        <h1 class="page-title">Projects</h1>
+    </header>
+    {% for project in site.projects %}
+       {% assign currentDate = project.date | date: "%Y" %}
+       {% if currentDate != myDate %}
+            <h2 id="y-{{ currentDate }}">{{ currentDate }}
+                <a href="#y-{{ currentDate }}" class="permalink"> 
+                    <span class="sr-only">Permalink</span>
+                    <span class="icon-link"></span> 
+                </a> 
+            </h2>
+            {% assign myDate = currentDate %}
+        {% endif %}
+        <div class="columns">
+            <div class="column column-1-2">
+                <article class="project-card" vocab="http://schema.org/" typeof="CreativeWork" resource="/projects/{{ project.title | replace: ' ', '-' | downcase }}/#project">
+                    <meta property="name" content="{{ project.title | replace: ' ', '-' | downcase }}">
+                    <meta property="image" content=""> 
+                    <a href="/projects/{{ project.title | replace: ' ', '-' | downcase }}/"
+                        class="no-hover no-print-link flip-project" tabindex="-1">
+                        <div class="project-card-img img sixteen-nine">
+                            <hy-img src="{{ project.image }}" alt="{{ project.title | replace: ' ', '-' | downcase }}" root-margin="512px">
+                                <noscript>
+                                    <img data-ignore src="{{ project.image }}" alt="{{ project.title | replace: ' ', '-' | downcase }}" />
+                                </noscript> 
+                            </hy-img>
+                        </div>
+                    </a>
+                    <h3 class="project-card-title"> 
+                        <a href="/projects/{{ project.title | replace: ' ', '-' | downcase }}/" class="flip-title" property="mainEntityOfPage">
+                            {{ project.title }}
+                        </a>
+                    </h3>
+                    <p class="project-card-text fine" property="disambiguatingDescription">
+                        {{ project.caption }}
+                    </p>
+                </article>
+            </div>
+        </div>
+    {% endfor %}
+</article>
