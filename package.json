@@ -21,7 +21,7 @@
   "config": {
     "port": 4000
   },
-  "author": "Florian Klampfer <mail@qwtel.com> (https://qwtel.com/)",
+  "author": "Suphicha Anusirikul <suphicha.anu@gmail.com>",
   "license": "GPL-3.0",
   "private": true,
   "devDependencies": {
@@ -50,7 +50,7 @@
     "resize-observer-polyfill": "^1.5.1",
     "rxjs": "^6.4.0",
     "serialize-javascript": ">=2.1.1",
-    "set-value": ">=2.0.1"
+    "set-value": ">=2.0.1",
     "smoothscroll-polyfill": "^0.4.3",
     "web-animations-js": "^2.3.1"
   },
