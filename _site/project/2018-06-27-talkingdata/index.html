@@ -122,7 +122,19 @@ Powered by Hydejack v8.4.0 <https://hydejack.com/>
       ]).then(function f() { d.body.classList.add('font-active'); }, function() {});
     });
     /**/
-}(window, document);</script>
+}(window, document);
+
+function darkMode() {
+    // document.body.classList.toggle("dark-mode");
+    if ( document.body.classList.contains('dark-mode') ) {
+      document.body.classList.remove('dark-mode');
+      document.body.classList.add('light-mode');
+    } else {
+      document.body.classList.add('dark-mode');
+      document.body.classList.remove('light-mode');
+    }
+}
+</script>
 
 <!--[if gt IE 8]><!---->
 
@@ -178,11 +190,6 @@ Powered by Hydejack v8.4.0 <https://hydejack.com/>
   </div>
 </div>
 <hr class="sr-only" hidden />
-<script>
-function darkMode() {
-    document.body.classList.toggle("dark-mode");
-}
-</script>
 
 <hy-push-state
   replace-ids="_main"
