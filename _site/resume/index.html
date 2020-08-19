@@ -121,19 +121,7 @@ Powered by Hydejack v8.4.0 <https://hydejack.com/>
     });
     /**/
 }(window, document);
-
-function darkMode() {
-    // document.body.classList.toggle("dark-mode");
-    if ( document.body.classList.contains('dark-mode') ) {
-      document.body.classList.remove('dark-mode');
-      document.body.classList.add('light-mode');
-    } else {
-      document.body.classList.add('dark-mode');
-      document.body.classList.remove('light-mode');
-    }
-}
 </script>
-
 <!--[if gt IE 8]><!---->
 
 
@@ -170,19 +158,31 @@ function darkMode() {
 
 </head>
 
-<body class="dark-mode">
-  <div id="_navbar" class="navbar fixed-top">
+  <body class="light-mode">
+    <script>
+  function darkMode() {
+    if (document.body.classList.contains('dark-mode')) {
+      document.body.classList.remove('dark-mode');
+      document.body.classList.add('light-mode');
+    } else {
+      document.body.classList.add('dark-mode');
+      document.body.classList.remove('light-mode');
+    }
+  }
+</script>
+<div id="_navbar" class="navbar fixed-top">
   <div class="content">
     <div class="nav-btn-bar">
-      <span class="sr-only">Jump to:</span>
+      <span
+        class="sr-only">Jump to:</span>
       <a id="_menu" class="nav-btn no-hover fl" href="#_navigation">
-      <!-- <a id="_menu" class="nav-btn no-hover fl" href="#" onClick="javascript :history.go(-1);"> -->
+        <!-- <a id="_menu" class="nav-btn no-hover fl" href="#" onClick="javascript :history.go(-1);"> -->
         <span class="sr-only">Navigation</span>
         <span class="icon-menu"></span>
       </a>
       <button id="dark-mode" class="nav-btn no-hover fl" onclick="darkMode()">
         <span class="sr-only">Dark Mode</span>
-        <span class="icon-contrast"></span> 
+        <span class="icon-contrast"></span>
       </button>
     </div>
   </div>
@@ -209,493 +209,517 @@ function darkMode() {
   
   >
   
-    <article id="resume" class="page vcard h-card" role="article" vocab="http://schema.org/" typeof="Person" resource="#resume">
-    <header class="hr">
-        <h1 class="page-title fn p-name" property="name">Suphicha Anusirikul</h1>
-        <p class="h3 faded subline title p-job-title" property="jobTitle">Frontend Developer</p>
-        <hy-img src="/assets/icons/icon.png" class="avatar photo u-photo" alt="" property="image"
-            root-margin="512px"> 
-            <noscript>
-                <img data-ignore src="/assets/icons/icon.png" class="avatar photo u-photo" alt="Suphicha Anusirikul" />
-            </noscript> 
-        </hy-img>
-    </header>
-
-    <p class="note p-note" property="description"> 
-        I am a young professional in online creative industry with a degree in Bachelor  of Multimedia Design from the University of Queensland (Brisbane, Australia).  I am a Web Designer and Front-End Developer with 4 professional years on this  field. My profession are HTML, CSS, jQuery, Web Responsive design. I am always  active to learn new things, and also a quick learner! I am truly interested  about User Experience Design and lots more coding languages.
-
+    <article
+  id="resume"
+  class="page vcard h-card"
+  role="article"
+  vocab="http://schema.org/"
+  typeof="Person"
+  resource="#resume"
+>
+  <header class="hr">
+    <h1 class="page-title fn p-name" property="name">
+      Suphicha Anusirikul
+    </h1>
+    <p class="h3 faded subline title p-job-title" property="jobTitle">
+      Frontend Developer
     </p>
-    <div class="columns contact">
-        <dl class="column column-3-5">
-            
-                <!-- Address -->
-                <dt class="faded"> 
-                    <span class="icon-location" title="Location"></span> 
-                    <span class="sr-only">Location</span>
-                    </dt>
-                <dd class="bold adr p-adr h-adr" property="address" typeof="PostalAddress">
-                    <!-- <span class="street-address p-street-address" property="streetAddress">9/9 Bangbon 3</span>,  -->
-                    <span class="locality p-locality" property="addressLocality">Bangkae</span>, 
-                    <span class="region p-region" property="addressRegion">Bangkok</span>,
-                    <span class="postal-code p-postal-code" property="postalCode">10160</span>,
-                    <meta property="addressCountry" content="US"> 
-                    <span class="country-name p-country-name">Thailand</span>
-                </dd>
-            
-            
-                <!-- Email -->
-                <dt class="faded">
-                    <span class="icon-mail" title="email"></span>
-                    <span class="sr-only">E-mail</span>
-                </dt>
-                <dd class="bold"> 
-                    <a href="mailto:suphicha.anu@gmail.com" class="external no-print-link url u-url" property="sameAs">
-                        suphicha.anu@gmail.com
-                    </a>
-                </dd>
-            
-            
-            
-                <!-- Website -->
-                <dt class="faded">
-                    <span class="icon-home3" title="Website"></span>
-                    <span class="sr-only">Website</span>
-                </dt>
-                <dd class="bold"> 
-                    <a href="https://bearrior.com" class="external no-print-link url u-url" property="sameAs">
-                        https://bearrior.com
-                    </a>
-                </dd>
-            
-        </dl>
-        <dl class="column column-2-5">
-            
-                <dt class="faded"> 
-                    <span class="icon-linkedin" title="LinkedIn"></span> 
-                    <span class="sr-only">LinkedIn</span>
-                </dt>
-                <dd class="bold">
-                    
-                        <a href="https://www.linkedin.com/in/suphicha/" class="external no-print-link url u-url" property="sameAs">
-                            <span class="nickname p-nickname ">Suphicha Anusirikul</span>
-                        </a>
-                    
-                </dd>
-            
-        </dl>
-    </div>
-    <div class="columns">
-        <div class="column column-3-5">
-            <!-- Work -->
-            <section>
-                <div class="npb">
-                    <h2 id="work" class="h3 faded hr"> Experience 
-                        <span class="symbol icon-briefcase"></span> 
-                        <a href="#work" class="permalink"> 
-                            <span class="sr-only">Permalink</span> 
-                            <span class="icon-link"></span> 
-                        </a> 
-                    </h2>
-                    
-                        <section>
-                                <header class="" property="worksFor" typeof="Organization">
-                                    <p class="faded"> 
-                                        <time datetime="2016-12-05 00:00">2016-12-05</time> –
-                                        
-                                            <em>present</em>
-                                        
-                                    </p>
-                                    <h3 class="h4 faded">
-                                        <meta property="name" content="Agoda"> 
-                                        <span class="bc">Frontend/UI Developer</span> at 
-                                        <a class="org p-org h-card " href="https://agoda.com" property="sameAs"> 
-                                            Agoda
-                                        </a>
-                                    </h3>
-                                </header>
-                                <p class="message"> Agoda is one of the world’s largest online hotel and accommodation booking platforms.  Founded in 2005 and now part of Booking Holdings, Agoda offers travelers a fast,  easy way to book hundreds of thousands of properties in almost every country on earth.
+    <hy-img
+      src="/assets/icons/icon.png"
+      class="avatar photo u-photo"
+      alt=""
+      property="image"
+      root-margin="512px"
+    >
+      <noscript>
+        <img
+          data-ignore
+          src="/assets/icons/icon.png"
+          class="avatar photo u-photo"
+          alt="Suphicha Anusirikul"
+        />
+      </noscript>
+    </hy-img>
+  </header>
+
+  <p class="note p-note" property="description">
+    Passionate Frontend/UI Developer with 5+ years of experience, seeking to improve website usages experience for the clients.  Implemented company-wide UI ReactJS Components for Agoda, and highly involved with ReactJS web transformation.  Used Scrum system for Agile development and continuous improvement.
+
+  </p>
+  <div class="columns contact">
+    <dl class="column column-3-5">
+      
+      <!-- Address -->
+      <dt class="faded">
+        <span class="icon-location" title="Location"></span>
+        <span class="sr-only">Location</span>
+      </dt>
+      <dd class="bold adr p-adr h-adr" property="address" typeof="PostalAddress">
+        <!-- <span class="street-address p-street-address" property="streetAddress">190 Bangbon 3</span>,  -->
+        <span class="locality p-locality" property="addressLocality"
+          >Bangkae</span
+        >,
+        <span class="region p-region" property="addressRegion"
+          >Bangkok</span
+        >,
+        <span class="postal-code p-postal-code" property="postalCode"
+          >10160</span
+        >,
+        <meta property="addressCountry" content="US" />
+        <span class="country-name p-country-name"
+          >Thailand</span
+        >
+      </dd>
+       
+      <!-- Email -->
+      <dt class="faded">
+        <span class="icon-mail" title="email"></span>
+        <span class="sr-only">E-mail</span>
+      </dt>
+      <dd class="bold">
+        <a
+          href="mailto:suphicha.anu@gmail.com"
+          class="external no-print-link url u-url"
+          property="sameAs"
+        >
+          suphicha.anu@gmail.com
+        </a>
+      </dd>
+        
+      <!-- Website -->
+      <dt class="faded">
+        <span class="icon-home3" title="Website"></span>
+        <span class="sr-only">Website</span>
+      </dt>
+      <dd class="bold">
+        <a
+          href="https://bearrior.com"
+          class="external no-print-link url u-url"
+          property="sameAs"
+        >
+          https://bearrior.com
+        </a>
+      </dd>
+      
+    </dl>
+    <dl class="column column-2-5">
+      
+      <dt class="faded">
+        <span class="icon-linkedin" title="LinkedIn"></span>
+        <span class="sr-only">LinkedIn</span>
+      </dt>
+      <dd class="bold">
+        
+        <a href="https://www.linkedin.com/in/suphicha/" class="external no-print-link url u-url" property="sameAs">
+          <span class="nickname p-nickname ">Suphicha Anusirikul</span>
+        </a>
+        
+      </dd>
+      
+    </dl>
+  </div>
+  <div class="columns">
+    <div class="column column-3-5">
+      <!-- Work -->
+      <section>
+        <div class="npb">
+          <h2 id="work" class="h3 faded hr">
+            Experience
+            <span class="symbol icon-briefcase"></span>
+            <a href="#work" class="permalink">
+              <span class="sr-only">Permalink</span>
+              <span class="icon-link"></span>
+            </a>
+          </h2>
+          
+          <section>
+            <header class="" property="worksFor" typeof="Organization">
+              <p class="faded">
+                <time datetime="2016-12-05 00:00"
+                  >2016-12-05</time
+                >
+                – 
+                <time datetime="2020-07-01 00:00"
+                  >2020-07-01</time
+                >
+                
+              </p>
+              <h3 class="h4 faded">
+                <meta property="name" content="Agoda" />
+                <span class="bc">Frontend/UI Developer</span> at
+                <a class="org p-org h-card " href="https://agoda.com" property="sameAs">
+                  Agoda
+                </a>
+              </h3>
+            </header>
+            <p class="message">Agoda is one of the world’s largest online hotel and accommodation booking platforms.  Founded in 2005 and now part of Booking Holdings, Agoda offers travelers a fast,  easy way to book hundreds of thousands of properties in almost every country on earth.
 </p>
-                                
-                                <h4 class="sr-only">Highlights</h4>
-                                    <ul>
-                                        
-                                        
-                                            <li>Build SCSS/CSS Framework for Agoda use.</li>
-                                            
-                                        
-                                            <li>Re-standardize the website with Accessibility-minded.</li>
-                                            
-                                        
-                                            <li>Build Documentation using Jekyll.</li>
-                                            
-                                        
-                                            <li>Recreating UI Framework for Agoda's React usage.</li>
-                                            
-                                        
-                                            <li>Research and developer SCSS framework around the atomic approach.</li>
-                                            
-                                        
-                                            <li>Working in format MVC patterns.</li>
-                                            
-                                        
-                                            <li>Work using node module, yarn and Webpack.</li>
-                                            
-                                        
-                                            <li>Maintenance bundling process for a better web performance.</li>
-                                            
-                                        
-                                            <li>Coding custom HTML/HTML5, LESS/CSS/CSS3, Bootstrap and JavaScript/Jquery.</li>
-                                            
-                                        
-                                            <li>Develop multi-platform websites such as desktop platforms and mobile platforms.</li>
-                                            
-                                        
-                                            <li>Create Development Guideline for Frontend Developers responds to W3C standards,accessibility and advocated a web-standards approach to increase search engine optimization (SEO-friendly) and cross-browser friendly.</li>
-                                            
-                                        
-                                            <li>Creating Automation (Gulp/Grunt).</li>
-                                            
-                                        
-                                            <li>Experience with UX principles, prototyping, requirements gathering and usability testing.</li>
-                                            
-                                        
-                                            <li>Work dynamically in an agile development team (Scrum and Kanban).</li>
-                                            
-                                        
-                                            <li>Working cross-team and manage projects with successful outcomes.</li>
-                                            
-                                        
-                                            <li>Working with data and A/B testing to improve designs and products.</li>
-                                            
-                                        
-                                            <li>Coordinate UI Designers on the project life cycle, including design and development. Testing and coordinate Quality Assurance Officer.</li>
-                                            
-                                        
-                                    </ul>
-                                
-                        </section>
-                    
-                        <section>
-                                <header class="" property="worksFor" typeof="Organization">
-                                    <p class="faded"> 
-                                        <time datetime="2014-03-01 00:00">2014-03-01</time> –
-                                        
-                                        <time datetime="2016-03-31 00:00">2016-03-31</time>
-                                        
-                                    </p>
-                                    <h3 class="h4 faded">
-                                        <meta property="name" content="Dek-D"> 
-                                        <span class="bc">CSS Designer</span> at 
-                                        <a class="org p-org h-card " href="https://dek-d.com" property="sameAs"> 
-                                            Dek-D
-                                        </a>
-                                    </h3>
-                                </header>
-                                <p class="message"> Teenage Driven community website.
+            
+            <h4 class="sr-only">Highlights</h4>
+            <ul>
+               
+              <li>Build SCSS/CSS Framework for Agoda use.</li>
+               
+              <li>Re-standardize the website with Accessibility-minded.</li>
+               
+              <li>Build Documentation using Jekyll.</li>
+               
+              <li>Recreating UI Framework for Agoda's React usage.</li>
+               
+              <li>Research and developer SCSS framework around the atomic approach.</li>
+               
+              <li>Working in format MVC patterns.</li>
+               
+              <li>Work using node module, yarn and Webpack.</li>
+               
+              <li>Maintenance bundling process for a better web performance.</li>
+               
+              <li>Coding custom HTML/HTML5, LESS/CSS/CSS3, Bootstrap and JavaScript/jQuery.</li>
+               
+              <li>Develop multi-platform websites such as desktop platforms and mobile platforms.</li>
+               
+              <li>Create Development Guideline for Frontend Developers responds to W3C standards,accessibility and advocated a web-standards approach to increase search engine optimization (SEO-friendly) and cross-browser friendly.</li>
+               
+              <li>Creating Automation (Gulp/Grunt).</li>
+               
+              <li>Experience with UX principles, prototyping, requirements gathering and usability testing.</li>
+               
+              <li>Work dynamically in an agile development team (Scrum and Kanban).</li>
+               
+              <li>Working cross-team and manage projects with successful outcomes.</li>
+               
+              <li>Working with data and A/B testing to improve designs and products.</li>
+               
+              <li>Coordinate UI Designers on the project life cycle, including design and development. Testing and coordinate Quality Assurance Officer.</li>
+               
+            </ul>
+            
+          </section>
+          
+          <section>
+            <header class="" property="worksFor" typeof="Organization">
+              <p class="faded">
+                <time datetime="2014-03-01 00:00"
+                  >2014-03-01</time
+                >
+                – 
+                <time datetime="2016-03-31 00:00"
+                  >2016-03-31</time
+                >
+                
+              </p>
+              <h3 class="h4 faded">
+                <meta property="name" content="Dek-D" />
+                <span class="bc">CSS Designer</span> at
+                <a class="org p-org h-card " href="https://dek-d.com" property="sameAs">
+                  Dek-D
+                </a>
+              </h3>
+            </header>
+            <p class="message">Teenage Driven community website.
 </p>
-                                
-                                <h4 class="sr-only">Highlights</h4>
-                                    <ul>
-                                        
-                                        
-                                            <li>Bring a new face of the site into more user friendly and easy navigated site.</li>
-                                            
-                                        
-                                            <li>Develop and design responsive website into a modern design with a better user and device friendly site.</li>
-                                            
-                                        
-                                            <li>A part of Graphic Designer for banners, standee and print media.</li>
-                                            
-                                        
-                                            <li>Main focus is using Front-end programming (including jQuery, PHP, HTML, and CSS).</li>
-                                            
-                                        
-                                    </ul>
-                                
-                        </section>
-                    
-                </div>
-            </section>
-            <!-- Volunteer -->
             
-                <section>
-                    <div class="npb">
-                        <h2 id="volunteer" class="h3 faded hr"> Volunteer 
-                            <span class="symbol icon-earth"></span> 
-                            <a href="#volunteer" class="permalink"> 
-                                <span class="sr-only">Permalink</span> 
-                            <span class="icon-link"></span> 
-                            </a>
-                        </h2>
-                        
-                            <section class="no-page-break">
-                                <header class="">
-                                    <p class="faded"> 
-                                        <time datetime="2012-05-25 00:00">2012-05-25</time> –
-                                        
-                                        <time datetime="2010-07-01 00:00">2010-07-01</time>
-                                        
-                                    </p>
-                                    <h3 class="h4 faded">
-                                        <span class="bc">Caretaker</span> at 
-                                        <a class=" " href="http://www.carefordogs.org/"> Care For Dogs </a>
-                                    </h3>
-                                </header>
-                                <p class="message">Care for Dogs Foundation is based in Chiang Mai Thailand. We organize sterilisation spaying sterilizations, medical care, vaccination and feed homeless and sickly dogs</p>
-                                
-                                    <h4 class="sr-only">Highlights</h4>
-                                    <ul>
-                                        
-                                        
-                                            <li>Take care of the vaccination process</li>
-                                            
-                                        
-                                    </ul>
-                                
-                            </section>
-                        
-                    </div>
-                </section>
+            <h4 class="sr-only">Highlights</h4>
+            <ul>
+               
+              <li>Bring a new face of the site into more user friendly and easy navigated site.</li>
+               
+              <li>Develop and design responsive website into a modern design with a better user and device friendly site.</li>
+               
+              <li>A part of Graphic Designer for banners, standee and print media.</li>
+               
+              <li>Main focus is using Front-end programming (including jQuery, PHP, HTML, and CSS).</li>
+               
+              <li>Improve web optimization and SEOs</li>
+               
+            </ul>
             
-            <!-- Education -->
-            
-            <section>
-                <div class="npb">
-                    <h2 id="education" class="h3 faded hr"> Education 
-                        <span class="symbol icon-library"></span> 
-                        <a href="#education" class="permalink"> 
-                            <span class="sr-only">Permalink</span> 
-                            <span class="icon-link"></span> 
-                        </a> 
-                    </h2>
-                    
-                    <section>
-                        <header class="">
-                            <p class="faded"> 
-                                    <time datetime="2011-03-01 00:00">2011-03-01</time> –
-                                    
-                                    <time datetime="2013-12-25 00:00">2013-12-25</time>
-                                    
-                            </p>
-                            <h3 class="h4 faded" property="alumniOf" typeof="EducationalOrganization"> 
-                                <span class="bc">Bachelor</span> in 
-                                <span class="bc">Multimedia Design</span> from
-                                <span class="bc" property="name">University of Queensland</span> with GPA of 
-                                <span class="bc">6.05</span></h3>
-                        </header>
-                        
-                    </section>
-                    
-                </div>
-            </section>
-            
-            <!-- Awards -->
-            
-            <!-- Publication -->
-            
-            <!-- Referene -->
-            
+          </section>
+          
         </div>
-        <!--second column -->
-        <div class="column column-2-5">
+      </section>
+      <!-- Volunteer -->
+      
+      <section>
+        <div class="npb">
+          <h2 id="volunteer" class="h3 faded hr">
+            Volunteer
+            <span class="symbol icon-earth"></span>
+            <a href="#volunteer" class="permalink">
+              <span class="sr-only">Permalink</span>
+              <span class="icon-link"></span>
+            </a>
+          </h2>
+          
+          <section class="no-page-break">
+            <header class="">
+              <p class="faded">
+                <time datetime="2012-05-25 00:00"
+                  >2012-05-25</time
+                >
+                – 
+                <time datetime="2010-07-01 00:00"
+                  >2010-07-01</time
+                >
+                
+              </p>
+              <h3 class="h4 faded">
+                <span class="bc">Caretaker</span> at
+                <a class=" " href="http://www.carefordogs.org/">
+                  Care For Dogs
+                </a>
+              </h3>
+            </header>
+            <p class="message">Care for Dogs Foundation is based in Chiang Mai Thailand. We organize sterilisation spaying sterilizations, medical care, vaccination and feed homeless and sickly dogs</p>
             
-            <section class="npb">
-            <!-- Language -->
-                <h2 id="languages" class="h3 faded hr"> Languages 
-                    <span class="symbol icon-bubbles"></span> 
-                    <a href="#languages" class="permalink"> 
-                        <span class="sr-only">Permalink</span> 
-                        <span class="icon-link"></span> 
-                    </a> 
-                </h2>
-                <dl class="skills">
-                    
-                    <dt class="h4 fl">Thai</dt>
-                    <dd class="faded clearafter">
-                        <div class="fr"> 
-                            <span class="sr-only">Fluency:</span> 
-                            <span class="help" title="Native speaker"> 
-                                <span class="sr-only">Native speaker</span>
-                                
-                                    <span class="icon-star-full"></span>
-                                
-                                    <span class="icon-star-full"></span>
-                                
-                                    <span class="icon-star-full"></span>
-                                
-                                    <span class="icon-star-full"></span>
-                                
-                                    <span class="icon-star-full"></span>
-                                
-                            </span>
-                        </div>
-                    </dd>
-                    
-                    <dt class="h4 fl">English</dt>
-                    <dd class="faded clearafter">
-                        <div class="fr"> 
-                            <span class="sr-only">Fluency:</span> 
-                            <span class="help" title="Advance speaker"> 
-                                <span class="sr-only">Advance speaker</span>
-                                
-                                    <span class="icon-star-full"></span>
-                                
-                                    <span class="icon-star-full"></span>
-                                
-                                    <span class="icon-star-full"></span>
-                                
-                                    <span class="icon-star-full"></span>
-                                
-                            </span>
-                        </div>
-                    </dd>
-                    
-                </dl>
-            </section>
+            <h4 class="sr-only">Highlights</h4>
+            <ul>
+               
+              <li>Take care of the vaccination process</li>
+               
+            </ul>
             
-            <!-- Skills-->
-            
-            <section class="npb">
-                <h2 id="skills" class="h3 faded hr"> Skills 
-                    <span class="symbol icon-wrench"></span> 
-                    <a href="#skills" class="permalink"> 
-                        <span class="sr-only">Permalink</span> 
-                        <span class="icon-link"></span> 
-                    </a>
-                </h2>
-                <dl class="skills">
-                    
-                        <dt class="h4 fl">Web Development</dt>
-                        <dd class="faded clearafter">
-                            <div class="fr"> <span class="sr-only">Level:</span> 
-                                <span class="help" title="Master"> 
-                                    <span class="sr-only">Master</span> 
-                                    
-                                        <span class="icon-star-full"></span>
-                                    
-                                        <span class="icon-star-full"></span>
-                                    
-                                        <span class="icon-star-full"></span>
-                                    
-                                        <span class="icon-star-full"></span>
-                                    
-                                        <span class="icon-star-full"></span>
-                                    
-                                </span>
-                            </div>
-                            
-                                <div> 
-                                    <span class="sr-only">Keywords:</span>
-                                    <ul class="tags">
-                                        
-                                        
-                                        <li class="tag">HTML</li>
-                                            
-                                        
-                                        <li class="tag">CSS</li>
-                                            
-                                        
-                                        <li class="tag">Javascript</li>
-                                            
-                                        
-                                        <li class="tag">React</li>
-                                            
-                                        
-                                        <li class="tag">Galen</li>
-                                            
-                                        
-                                    </ul>
-                                </div>
-                            
-                        </dd>
-                    
-                        <dt class="h4 fl">Web Design</dt>
-                        <dd class="faded clearafter">
-                            <div class="fr"> <span class="sr-only">Level:</span> 
-                                <span class="help" title="Master"> 
-                                    <span class="sr-only">Master</span> 
-                                    
-                                        <span class="icon-star-full"></span>
-                                    
-                                        <span class="icon-star-full"></span>
-                                    
-                                        <span class="icon-star-full"></span>
-                                    
-                                        <span class="icon-star-full"></span>
-                                    
-                                        <span class="icon-star-full"></span>
-                                    
-                                </span>
-                            </div>
-                            
-                                <div> 
-                                    <span class="sr-only">Keywords:</span>
-                                    <ul class="tags">
-                                        
-                                        
-                                        <li class="tag">Photoshop</li>
-                                            
-                                        
-                                        <li class="tag">Illustrator</li>
-                                            
-                                        
-                                        <li class="tag">UX Design</li>
-                                            
-                                        
-                                        <li class="tag">UI Design</li>
-                                            
-                                        
-                                    </ul>
-                                </div>
-                            
-                        </dd>
-                    
-                </dl>
-            </section>
-            
-            
-            <section class="npb">
-                <!-- Interest -->
-                <h2 id="interests" class="h3 faded hr"> Interests 
-                    <span class="symbol icon-heart"></span> 
-                    <a href="#interests" class="permalink"> 
-                        <span class="sr-only">Permalink</span> 
-                        <span class="icon-link"></span> 
-                    </a> 
-                </h2>
-                <dl class="skills">
-                    
-                        <dt class="h4">Photography</dt>
-                        <dd> <span class="sr-only">Keywords:</span>
-                            <ul class="tags">
-                                
-                                
-                                <li class="tag">Portait</li>
-                                    
-                                
-                                <li class="tag">Landscape</li>
-                                    
-                                
-                            </ul>
-                        </dd>
-                    
-                        <dt class="h4">Travel</dt>
-                        <dd> <span class="sr-only">Keywords:</span>
-                            <ul class="tags">
-                                
-                                
-                                <li class="tag">Bagpacking</li>
-                                    
-                                
-                            </ul>
-                        </dd>
-                    
-                </dl>
-            </section>
-            
+          </section>
+          
         </div>
+      </section>
+      
+      <!-- Education -->
+      
+      <section>
+        <div class="npb">
+          <h2 id="education" class="h3 faded hr">
+            Education
+            <span class="symbol icon-library"></span>
+            <a href="#education" class="permalink">
+              <span class="sr-only">Permalink</span>
+              <span class="icon-link"></span>
+            </a>
+          </h2>
+          
+          <section>
+            <header class="">
+              <p class="faded">
+                <time datetime="2011-03-01 00:00"
+                  >2011-03-01</time
+                >
+                – 
+                <time datetime="2013-12-25 00:00"
+                  >2013-12-25</time
+                >
+                
+              </p>
+              <h3 class="h4 faded" property="alumniOf" typeof="EducationalOrganization">
+                <span class="bc">Bachelor</span> in
+                <span class="bc">Multimedia Design</span> from
+                <span class="bc" property="name">University of Queensland</span> with GPA of
+                <span class="bc">6.05</span>
+              </h3>
+            </header>
+            
+          </section>
+          
+        </div>
+      </section>
+      
+      <!-- Awards -->
+      
+      <!-- Publication -->
+      
+      <!-- Referene -->
+      
     </div>
+    <!--second column -->
+    <div class="column column-2-5">
+      
+      <section class="npb">
+        <!-- Language -->
+        <h2 id="languages" class="h3 faded hr">
+          Languages
+          <span class="symbol icon-bubbles"></span>
+          <a href="#languages" class="permalink">
+            <span class="sr-only">Permalink</span>
+            <span class="icon-link"></span>
+          </a>
+        </h2>
+        <dl class="skills">
+          
+          <dt class="h4 fl">Thai</dt>
+          <dd class="faded clearafter">
+            <div class="fr">
+              <span class="sr-only">Fluency:</span>
+              <span class="help" title="Native speaker">
+                <span class="sr-only">Native speaker</span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+              </span>
+            </div>
+          </dd>
+          
+          <dt class="h4 fl">English</dt>
+          <dd class="faded clearafter">
+            <div class="fr">
+              <span class="sr-only">Fluency:</span>
+              <span class="help" title="Advance speaker">
+                <span class="sr-only">Advance speaker</span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+              </span>
+            </div>
+          </dd>
+          
+        </dl>
+      </section>
+      
+      <!-- Skills-->
+      
+      <section class="npb">
+        <h2 id="skills" class="h3 faded hr">
+          Skills
+          <span class="symbol icon-wrench"></span>
+          <a href="#skills" class="permalink">
+            <span class="sr-only">Permalink</span>
+            <span class="icon-link"></span>
+          </a>
+        </h2>
+        <dl class="skills">
+          
+          <dt class="h4 fl">Web Development</dt>
+          <dd class="faded clearafter">
+            <div class="fr">
+              <span class="sr-only">Level:</span>
+              <span class="help" title="Master">
+                <span class="sr-only">Master</span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+              </span>
+            </div>
+            
+            <div>
+              <span class="sr-only">Keywords:</span>
+              <ul class="tags">
+                 
+                <li class="tag">HTML</li>
+                 
+                <li class="tag">CSS</li>
+                 
+                <li class="tag">Javascript</li>
+                 
+                <li class="tag">React</li>
+                 
+                <li class="tag">Galen</li>
+                 
+              </ul>
+            </div>
+            
+          </dd>
+          
+          <dt class="h4 fl">Web Design</dt>
+          <dd class="faded clearafter">
+            <div class="fr">
+              <span class="sr-only">Level:</span>
+              <span class="help" title="Master">
+                <span class="sr-only">Master</span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+                <span class="icon-star-full"></span>
+                
+              </span>
+            </div>
+            
+            <div>
+              <span class="sr-only">Keywords:</span>
+              <ul class="tags">
+                 
+                <li class="tag">Photoshop</li>
+                 
+                <li class="tag">Illustrator</li>
+                 
+                <li class="tag">UX Design</li>
+                 
+                <li class="tag">UI Design</li>
+                 
+              </ul>
+            </div>
+            
+          </dd>
+          
+        </dl>
+      </section>
+       
+      <section class="npb">
+        <!-- Interest -->
+        <h2 id="interests" class="h3 faded hr">
+          Interests
+          <span class="symbol icon-heart"></span>
+          <a href="#interests" class="permalink">
+            <span class="sr-only">Permalink</span>
+            <span class="icon-link"></span>
+          </a>
+        </h2>
+        <dl class="skills">
+          
+          <dt class="h4">Photography</dt>
+          <dd>
+            <span class="sr-only">Keywords:</span>
+            <ul class="tags">
+               
+              <li class="tag">Portait</li>
+               
+              <li class="tag">Landscape</li>
+               
+            </ul>
+          </dd>
+          
+          <dt class="h4">Travel</dt>
+          <dd>
+            <span class="sr-only">Keywords:</span>
+            <ul class="tags">
+               
+              <li class="tag">Bagpacking</li>
+               
+            </ul>
+          </dd>
+          
+        </dl>
+      </section>
+      
+    </div>
+  </div>
 </article>
+
     
 
     
@@ -931,5 +955,4 @@ function darkMode() {
 
 
 
-</body>
-</html>
+  </body></html>
