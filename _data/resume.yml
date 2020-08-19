@@ -9,10 +9,11 @@ basics:
   phone: ""
   website: "https://bearrior.com"
   summary: >
-    I am a UI/UX Designer and Front-End Developer with 6 years in this field. My profession are HTML, CSS, ReactJS, and Web Responsive design. 
-    I am always active to learn new things, and also a quick learner! I am truly interested about User Experience Design and lots more coding languages.
+    Passionate Frontend/UI Developer with 5+ years of experience, seeking to improve website usages experience for the clients. 
+    Implemented company-wide UI ReactJS Components for Agoda, and highly involved with ReactJS web transformation. 
+    Used Scrum system for Agile development and continuous improvement.
   location:
-    address: "9/9 Bangbon 3"
+    address: "190 Bangbon 3"
     postalCode: "10160"
     city: "Bangkae"
     countryCode: "Thailand"
@@ -40,7 +41,7 @@ works:
       - Working in format MVC patterns.
       - Work using node module, yarn and Webpack.
       - Maintenance bundling process for a better web performance.
-      - Coding custom HTML/HTML5, LESS/CSS/CSS3, Bootstrap and JavaScript/Jquery.
+      - Coding custom HTML/HTML5, LESS/CSS/CSS3, Bootstrap and JavaScript/jQuery.
       - Develop multi-platform websites such as desktop platforms and mobile platforms.
       - Create Development Guideline for Frontend Developers responds to W3C standards,accessibility and advocated a web-standards approach to increase search engine optimization (SEO-friendly) and cross-browser friendly.
       - Creating Automation (Gulp/Grunt).
@@ -61,6 +62,7 @@ works:
       - Develop and design responsive website into a modern design with a better user and device friendly site. 
       - A part of Graphic Designer for banners, standee and print media. 
       - Main focus is using Front-end programming (including jQuery, PHP, HTML, and CSS).
+      - Improve web optimization and SEOs
 volunteer:
   - organization: "Care For Dogs"
     position: "Caretaker"
