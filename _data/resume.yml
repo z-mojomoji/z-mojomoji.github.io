@@ -9,12 +9,8 @@ basics:
   phone: ""
   website: "https://bearrior.com"
   summary: >
-    I am a young professional in online creative industry with a degree in Bachelor 
-    of Multimedia Design from the University of Queensland (Brisbane, Australia). 
-    I am a Web Designer and Front-End Developer with 4 professional years on this 
-    field. My profession are HTML, CSS, jQuery, Web Responsive design. I am always 
-    active to learn new things, and also a quick learner! I am truly interested 
-    about User Experience Design and lots more coding languages.
+    I am a UI/UX Designer and Front-End Developer with 6 years in this field. My profession are HTML, CSS, ReactJS, and Web Responsive design. 
+    I am always active to learn new things, and also a quick learner! I am truly interested about User Experience Design and lots more coding languages.
   location:
     address: "9/9 Bangbon 3"
     postalCode: "10160"
@@ -30,7 +26,7 @@ works:
     position: "Frontend/UI Developer"
     website: "https://agoda.com"
     startDate: "2016-12-05"
-    endDate: ""
+    endDate: "2020-07-01"
     summary: >
       Agoda is one of the world’s largest online hotel and accommodation booking platforms. 
       Founded in 2005 and now part of Booking Holdings, Agoda offers travelers a fast, 
