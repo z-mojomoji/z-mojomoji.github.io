@@ -388,7 +388,7 @@ layout: base
       </section>
       {% endif %}
       <!-- Skills-->
-      <!-- {% if site.data.resume.skills %} -->
+      {% if site.data.resume.skills %}
       <section class="npb">
         <h2 id="skills" class="h3 faded hr">
           Skills
@@ -425,8 +425,7 @@ layout: base
           {% endfor %}
         </dl>
       </section>
-      <!-- {% endif %}  -->
-      {% if site.data.resume.interests %}
+      {% endif %} {% if site.data.resume.interests %}
       <section class="npb">
         <!-- Interest -->
         <h2 id="interests" class="h3 faded hr">
