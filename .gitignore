@@ -121,4 +121,5 @@ sites/*/files
 sites/*/private
 
 # BLOG - JEKYLL
-_site
+_site/
+_site/*
